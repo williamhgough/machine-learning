@@ -1,7 +1,6 @@
 # Simple Linear Regression
 
 # Import the libraries
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -13,15 +12,6 @@ y = dataset.iloc[:, 1].values
 # Split into training and test sets
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1/3, random_state = 0)
-
-
-# Feature Scaling (not needed for simple linear regression)
-#from sklearn.preprocessing import StandardScaler
-#sc_X = StandardScaler()
-#X_train = sc_X.fit_transform(X_train)
-#X_test = sc_X.transform(X_test)
-#sc_y = StandardScaler()
-#y_train = sc_y.fit_transform(y_train)
 
 # Fit simple linear regression to training set
 from sklearn.linear_model import LinearRegression
